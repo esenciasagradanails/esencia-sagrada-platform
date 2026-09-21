@@ -40,7 +40,7 @@ const FaqSection: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Preguntas Frecuentes
+          Preguntas frecuentes
         </motion.h2>
 
         <motion.div

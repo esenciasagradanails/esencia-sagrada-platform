@@ -21,7 +21,7 @@ const LogisticsSection: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Detalles de la Masterclass
+          Detalles de la masterclass
         </motion.h2>
 
         <motion.div

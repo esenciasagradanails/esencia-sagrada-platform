@@ -21,7 +21,7 @@ const LearnSection: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Lo Que Aprenderás
+          Lo que aprenderás
         </motion.h2>
 
         <motion.div
