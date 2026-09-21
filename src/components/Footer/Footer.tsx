@@ -22,6 +22,23 @@ const Footer: React.FC = () => {
     </motion.div>
 
     <motion.div
+     className='footer__nav'
+     initial={{ opacity: 0, y: 20 }}
+     whileInView={{ opacity: 1, y: 0 }}
+     viewport={{ once: true }}
+    >
+     <h4 className='footer__social-heading'>Enlaces Rápidos</h4>
+     <nav className='footer__nav-links'>
+      <a href='#learn' className='footer__nav-link'>Programa</a>
+      <a href='#audience' className='footer__nav-link'>Audiencia</a>
+      <a href='#authority' className='footer__nav-link'>Instructora</a>
+      <a href='#social' className='footer__nav-link'>Comunidad</a>
+      <a href='#logistics' className='footer__nav-link'>Detalles</a>
+      <a href='#faq' className='footer__nav-link'>Preguntas Frecuentes</a>
+     </nav>
+    </motion.div>
+
+    <motion.div
      className='footer__social'
      initial={{ opacity: 0, y: 20 }}
      whileInView={{ opacity: 1, y: 0 }}
