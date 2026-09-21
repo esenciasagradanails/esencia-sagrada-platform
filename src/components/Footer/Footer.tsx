@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaInstagram, FaFacebookF, FaTiktok } from 'react-icons/fa';
 import { socialLinks } from '../../constants/socialLinks';
+import { ASSETS } from '../../constants/assets';
 import '../../styles/footer.scss';
 
 const Footer: React.FC = () => {
@@ -16,7 +17,7 @@ const Footer: React.FC = () => {
           viewport={{ once: true }}
         >
           <img
-            src="/assets/logo-transparent.png"
+            src={ASSETS.LOGO_TRANSPARENT}
             alt="Esencia Sagrada Nails"
             className="footer__logo"
           />

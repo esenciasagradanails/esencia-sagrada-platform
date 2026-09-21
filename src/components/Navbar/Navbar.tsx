@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Moon, Sun } from 'lucide-react';
 import { useAppDispatch, useAppSelector } from '../../hooks/storeHooks';
 import { toggleTheme } from '../../store/themeSlice';
+import { ASSETS } from '../../constants/assets';
 import '../../styles/navbar.scss';
 
 const Navbar: React.FC = () => {
@@ -14,7 +15,7 @@ const Navbar: React.FC = () => {
       <div className="navbar__inner">
         <motion.div whileHover={{ scale: 1.02 }}>
           <img
-            src="/assets/logo-transparent.png"
+            src={ASSETS.LOGO_TRANSPARENT}
             alt="Logo de Esencia Sagrada Nails"
             className="navbar__logo"
           />

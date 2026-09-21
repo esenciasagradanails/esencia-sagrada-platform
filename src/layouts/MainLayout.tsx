@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from '../hooks/storeHooks';
 import { toggleTheme } from '../store/themeSlice';
 import { socialLinks } from '../constants/socialLinks';
 import { FaInstagram, FaTiktok, FaFacebook } from 'react-icons/fa';
+import { ASSETS } from '../constants/assets';
 
 import styles from './MainLayout.module.scss';
 
@@ -22,7 +23,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.logoContainer}>
-          <img src="/assets/logo-esencia-sagrada.webp" alt="Logo de Esencia Sagrada Nails" className={styles.logo} />
+          <img src={ASSETS.LOGO_WEBP} alt="Logo de Esencia Sagrada Nails" className={styles.logo} />
         </div>
         <button onClick={() => dispatch(toggleTheme())} className={styles.themeToggle} aria-label="Cambiar Tema">
           {theme === 'light' ? '🌙 Modo Oscuro' : '☀️ Modo Claro'}

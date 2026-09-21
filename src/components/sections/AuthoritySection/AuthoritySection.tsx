@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeUp, fadeLeft, fadeRight } from '../../../lib/animations';
 import { Award, Star } from 'lucide-react';
+import { ASSETS } from '../../../constants/assets';
 import '../../../styles/authority.scss';
 
 const AuthoritySection: React.FC = () => {
@@ -15,7 +16,7 @@ const AuthoritySection: React.FC = () => {
      viewport={{ once: true, amount: 0.3 }}
      variants={fadeRight}
     >
-     <img src='/assets/Dayana.webp' alt='Dayana - Instructora de Esencia Sagrada' className='authority__image' />
+     <img src={ASSETS.DAYANA_WEBP} alt='Dayana - Instructora de Esencia Sagrada' className='authority__image' />
     </motion.div>
 
     <motion.div
