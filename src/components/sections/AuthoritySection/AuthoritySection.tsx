@@ -16,7 +16,7 @@ const AuthoritySection: React.FC = () => {
      viewport={{ once: true, amount: 0.3 }}
      variants={fadeRight}
     >
-     <img src={ASSETS.DAYANA_WEBP} alt='Dayana - Instructora de Esencia Sagrada' className='authority__image' />
+     <img src={ASSETS.DAYANA_SVG} alt='Dayana - Instructora de Esencia Sagrada' className='authority__image' />
     </motion.div>
 
     <motion.div
@@ -37,7 +37,9 @@ const AuthoritySection: React.FC = () => {
      </motion.h2>
 
      <motion.p variants={fadeUp} className='authority__body'>
-      Soy Dayana, artista del mundo de las uñas con + de 6 años de trayectoria y experiencia en los cuales he adquirido un gran conocimiento y dominio de diferentes técnicas lo cual me ha permitido crear mi propio negocio y vivir de mi pasión por este arte.
+      Soy Dayana, artista del mundo de las uñas con + de 6 años de trayectoria y experiencia en los cuales he adquirido un gran
+      conocimiento y dominio de diferentes técnicas lo cual me ha permitido crear mi propio negocio y vivir de mi pasión por este
+      arte.
      </motion.p>
 
      <motion.a
