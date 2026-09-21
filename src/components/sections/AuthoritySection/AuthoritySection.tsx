@@ -46,7 +46,7 @@ const AuthoritySection: React.FC = () => {
       variants={fadeUp}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      href='https://www.skool.com/esencia-sagrada'
+      href='https://www.skool.com/@dayana-yotagri-jimenez-8967?utm_source=gemini'
       target='_blank'
       rel='noopener noreferrer'
       className='authority__cta'

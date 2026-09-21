@@ -33,13 +33,16 @@
 
 /* Width-based sizing for PNG — height:auto shows the full image, never clips */
 .authority__image {
- border-radius: 1rem;
- box-shadow: 0 16px 50px rgba(0, 0, 0, 0.12);
- display: block;
- height: auto;
- max-width: 420px;
- object-fit: contain;
- width: 100%;
+  -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  border-radius: 1rem;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.12);
+  display: block;
+  height: auto;
+  mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  max-width: 400px;
+  object-fit: contain;
+  object-position: top center;
+  width: 100%;
 }
 
 .authority__text-col {
