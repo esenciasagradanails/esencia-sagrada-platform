@@ -43,6 +43,7 @@ const Navbar: React.FC = () => {
 
     <div className='navbar__actions'>
      <motion.button
+      type='button'
       whileHover={{ scale: 1.1, rotate: 15 }}
       whileTap={{ scale: 0.9 }}
       onClick={() => dispatch(toggleTheme())}
