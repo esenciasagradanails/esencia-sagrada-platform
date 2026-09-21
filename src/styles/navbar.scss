@@ -9,7 +9,7 @@
  top: 0;
  transition: background-color 0.3s ease;
  width: 100%;
- z-index: 50;
+ z-index: 9999;
 }
 
 .navbar__inner {
@@ -52,6 +52,10 @@
  position: relative;
  transition: box-shadow 0.2s ease;
  z-index: 100;
+
+ svg {
+  pointer-events: none;
+ }
 
  &:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
