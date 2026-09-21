@@ -13,7 +13,7 @@ const AuthoritySection: React.FC = () => {
      className='authority__image-col'
      initial='hidden'
      whileInView='visible'
-     viewport={{ once: true, amount: 0.3 }}
+     viewport={{ once: false, amount: 0.3 }}
      variants={fadeRight}
     >
      <img src={ASSETS.DAYANA_SVG} alt='Dayana - Instructora de Esencia Sagrada' className='authority__image' />
