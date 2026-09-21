@@ -1,0 +1,108 @@
+/* Authority (WhoIsDayana) section styles — src/styles/authority.scss */
+
+.authority {
+ background-color: var(--bg-surface);
+ padding: 6rem 0;
+ width: 100%;
+}
+
+.authority__inner {
+ /* align-items: flex-start so each column is sized by its own content */
+ align-items: flex-start;
+ display: flex;
+ gap: 4rem;
+ justify-content: center;
+ margin: 0 auto;
+ max-width: 1100px;
+ padding: 0 2rem;
+ width: 100%;
+
+ @media (max-width: 768px) {
+  flex-direction: column;
+  gap: 2rem;
+ }
+}
+
+/* Image column: no overflow, no height cap — height follows the image */
+.authority__image-col {
+ display: flex;
+ flex-shrink: 0;
+ justify-content: center;
+ /* DO NOT add overflow:hidden, max-height, or height here */
+}
+
+/* Width-based sizing for PNG — height:auto shows the full image, never clips */
+.authority__image {
+ border-radius: 1rem;
+ box-shadow: 0 16px 50px rgba(0, 0, 0, 0.12);
+ display: block;
+ height: auto;
+ max-width: 420px;
+ object-fit: contain;
+ width: 100%;
+}
+
+.authority__text-col {
+ display: flex;
+ flex-direction: column;
+ gap: 1.25rem;
+ padding-top: 1rem;
+}
+
+.authority__stars {
+ color: #f59e0b;
+ display: flex;
+ gap: 0.4rem;
+
+ @media (max-width: 768px) {
+  justify-content: center;
+ }
+}
+
+.authority__heading {
+ color: var(--color-primary);
+ font-size: clamp(2rem, 4vw, 3rem);
+ font-weight: 900;
+ letter-spacing: -0.03em;
+ line-height: 1.15;
+ margin: 0;
+}
+
+.authority__body {
+ color: var(--text-main);
+ font-size: 1.15rem;
+ line-height: 1.75;
+ margin: 0;
+}
+
+.authority__muted {
+ color: var(--text-muted);
+ font-size: 1.05rem;
+ line-height: 1.7;
+ margin: 0;
+}
+
+.authority__cta {
+ align-items: center;
+ border: 2px solid var(--color-primary);
+ border-radius: 9999px;
+ color: var(--color-primary);
+ display: inline-flex;
+ font-size: 1.05rem;
+ font-weight: 700;
+ gap: 0.6rem;
+ justify-content: center;
+ margin-top: 1.5rem;
+ padding: 1rem 2.25rem;
+ text-decoration: none;
+ transition: background-color 0.2s ease;
+ width: fit-content;
+
+ &:hover {
+  background-color: rgba(197, 155, 95, 0.1);
+ }
+
+ @media (max-width: 768px) {
+  margin: 1.5rem auto 0;
+ }
+}
