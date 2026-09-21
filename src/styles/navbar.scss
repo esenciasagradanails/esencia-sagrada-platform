@@ -19,7 +19,7 @@
  margin: 0 auto;
  max-width: 1400px;
  /* generous vertical padding so the logo has room to breathe */
- padding: 1rem 2rem;
+ padding: 0.5rem 2rem;
  width: 100%;
 }
 
@@ -27,7 +27,7 @@
 .navbar__logo {
  display: block;
  flex-shrink: 0;
- height: 80px;
+ height: 70px;
  object-fit: contain;
  width: 220px;
 }
@@ -67,58 +67,12 @@
 
 .navbar__link {
  color: var(--text-main);
- font-size: 0.8rem;
+ font-size: 0.9rem;
  font-weight: 600;
  text-decoration: none;
  transition: color 0.2s ease;
 
  &:hover {
   color: var(--color-primary);
- }
-}
-
-.navbar__mobile-toggle {
- align-items: center;
- background: transparent;
- border: none;
- color: var(--text-main);
- cursor: pointer;
- display: none;
- justify-content: center;
- padding: 0.5rem;
-
- @media (max-width: 1024px) {
-  display: flex;
- }
-}
-
-.navbar__mobile-menu {
- background-color: var(--bg-base);
- border-bottom: 1px solid var(--border-color);
- overflow: hidden;
- width: 100%;
-}
-
-.navbar__mobile-nav {
- display: flex;
- flex-direction: column;
- padding: 1rem 2rem 2rem;
-}
-
-.navbar__mobile-link {
- border-bottom: 1px solid var(--border-color);
- color: var(--text-main);
- font-size: 1.1rem;
- font-weight: 600;
- padding: 1rem 0;
- text-decoration: none;
- transition: color 0.2s ease;
-
- &:hover {
-  color: var(--color-primary);
- }
-
- &:last-child {
-  border-bottom: none;
  }
 }
