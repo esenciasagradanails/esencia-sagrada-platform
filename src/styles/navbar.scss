@@ -67,7 +67,7 @@
 
 .navbar__link {
  color: var(--text-main);
- font-size: 0.9rem;
+ font-size: 0.8rem;
  font-weight: 600;
  text-decoration: none;
  transition: color 0.2s ease;
@@ -117,7 +117,7 @@
  &:hover {
   color: var(--color-primary);
  }
- 
+
  &:last-child {
   border-bottom: none;
  }
