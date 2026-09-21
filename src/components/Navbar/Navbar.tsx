@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Moon, Sun } from 'lucide-react';
+import { BookOpen, Users, Star, Heart, Calendar, HelpCircle } from 'lucide-react';
 import { useAppDispatch, useAppSelector } from '../../hooks/storeHooks';
 import { toggleTheme } from '../../store/themeSlice';
 import { ASSETS } from '../../constants/assets';
@@ -21,22 +22,22 @@ const Navbar: React.FC = () => {
 
     <nav className='navbar__nav'>
      <a href='#learn' className='navbar__link'>
-      Programa
+      <BookOpen size={16} /> Programa
      </a>
      <a href='#audience' className='navbar__link'>
-      Audiencia
+      <Users size={16} /> Audiencia
      </a>
      <a href='#authority' className='navbar__link'>
-      Instructora
+      <Star size={16} /> Instructora
      </a>
      <a href='#social' className='navbar__link'>
-      Comunidad
+      <Heart size={16} /> Comunidad
      </a>
      <a href='#logistics' className='navbar__link'>
-      Detalles
+      <Calendar size={16} /> Detalles
      </a>
      <a href='#faq' className='navbar__link'>
-      Preguntas frecuentes
+      <HelpCircle size={16} /> Preguntas Frecuentes
      </a>
     </nav>
 

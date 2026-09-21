@@ -1,98 +1,102 @@
 .social-banner {
-  align-items: center;
-  background-color: var(--bg-base);
-  display: flex;
-  justify-content: center;
-  padding: 6rem 2rem;
-  width: 100%;
+ align-items: center;
+ display: flex;
+ justify-content: center;
+ padding: 6rem 2rem;
+ position: relative;
+ width: 100%;
 }
 
 .social-banner__inner {
-  align-items: center;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: 1.5rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin: 0 auto;
-  max-width: 900px;
-  padding: 4rem 2rem;
-  position: relative;
-  text-align: center;
-  width: 95%;
+ display: block;
+ align-items: center;
+ background-color: var(--bg-surface);
+ border: 1px solid var(--border-color);
+ border-radius: 1.5rem;
+ box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
+ margin: 0 auto;
+ padding: 4rem 2rem;
+ position: relative;
+ text-align: center;
+ width: 90%;
 
-  @media (min-width: 768px) {
-    width: 90%;
-  }
+ @media (min-width: 768px) {
+  width: 90%;
+ }
 
-  /* Elegant accent border on top */
-  &::before {
-    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
-    border-radius: 1.5rem 1.5rem 0 0;
-    content: '';
-    height: 4px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
+ /* Elegant accent border on top */
+ &::before {
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  border-radius: 1.5rem 1.5rem 0 0;
+  content: '';
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+ }
 }
 
 .social-banner__heading {
-  color: var(--color-primary);
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  margin: 0;
-  text-shadow: 0 0 15px var(--glow-primary);
+ color: var(--color-primary);
+ font-size: clamp(2rem, 4vw, 2.75rem);
+ font-weight: 900;
+ letter-spacing: -0.02em;
+ margin: 0;
+ text-shadow: 0 0 15px var(--glow-primary);
 }
 
 .social-banner__subtitle {
-  color: var(--text-main);
-  font-size: 1.15rem;
-  line-height: 1.6;
-  margin: 0;
-  max-width: 600px;
+ color: var(--text-main);
+ font-size: 1.15rem;
+ line-height: 1.6;
+ margin: 0;
+ max-width: 600px;
 }
 
 .social-banner__links {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 1.5rem;
+ align-items: center;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 2rem;
+ justify-content: center;
+ margin-top: 1.5rem;
 }
 
 .social-banner__link {
-  align-items: center;
-  background-color: var(--bg-base);
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  color: var(--text-main);
-  display: flex;
-  font-size: 2rem;
-  height: 4.5rem;
-  justify-content: center;
-  transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  width: 4.5rem;
+ align-items: center;
+ background-color: var(--bg-base);
+ border: 1px solid var(--border-color);
+ border-radius: 50%;
+ color: var(--text-main);
+ display: flex;
+ font-size: 2rem;
+ height: 4.5rem;
+ justify-content: center;
+ transition:
+  border-color 0.3s ease,
+  color 0.3s ease,
+  transform 0.3s ease,
+  box-shadow 0.3s ease;
+ width: 4.5rem;
 
-  &:hover {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 15px rgba(197, 155, 95, 0.3);
-    color: var(--color-primary);
-    transform: scale(1.08);
-  }
+ &:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 15px rgba(197, 155, 95, 0.3);
+  color: var(--color-primary);
+  transform: scale(1.08);
+ }
 }
 
 .social-banner__link--skool {
-  border-radius: 9999px;
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  padding: 0 2rem;
-  text-transform: uppercase;
-  width: auto;
+ border-radius: 9999px;
+ font-size: 1.2rem;
+ font-weight: 800;
+ letter-spacing: 0.05em;
+ padding: 0 2rem;
+ text-transform: uppercase;
+ width: auto;
 }
