@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
    <div className='navbar__inner'>
     <motion.div whileHover={{ scale: 1.02 }}>
      <a href='#hero'>
-      <img src={ASSETS.LOGO_SVG} alt='Logo de Esencia Sagrada Nails' className='navbar__logo' />
+      <img src={ASSETS.LOGO_PNG} alt='Logo de Esencia Sagrada Nails' className='navbar__logo' />
      </a>
     </motion.div>
 
@@ -52,7 +52,6 @@ const Navbar: React.FC = () => {
      </motion.button>
     </div>
    </div>
-
   </header>
  );
 };

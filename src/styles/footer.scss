@@ -79,9 +79,12 @@
 }
 
 .footer__nav-link {
+  align-items: center;
   color: var(--text-muted);
+  display: flex;
   font-size: 0.95rem;
   font-weight: 600;
+  gap: 0.5rem;
   transition: color 0.25s ease, text-shadow 0.25s ease, transform 0.25s ease;
 
   &:hover {
