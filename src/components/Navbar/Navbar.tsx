@@ -24,12 +24,24 @@ const Navbar: React.FC = () => {
     </motion.div>
 
     <nav className='navbar__nav'>
-     <a href='#learn' className='navbar__link'>Lo que aprenderás</a>
-     <a href='#audience' className='navbar__link'>Para quién es</a>
-     <a href='#authority' className='navbar__link'>Con quién aprenderás</a>
-     <a href='#social' className='navbar__link'>Comunidad</a>
-     <a href='#logistics' className='navbar__link'>Detalles</a>
-     <a href='#faq' className='navbar__link'>Preguntas frecuentes</a>
+     <a href='#learn' className='navbar__link'>
+      Lo que aprenderás
+     </a>
+     <a href='#audience' className='navbar__link'>
+      Para quién es
+     </a>
+     <a href='#authority' className='navbar__link'>
+      Con quién aprenderás
+     </a>
+     <a href='#social' className='navbar__link'>
+      Comunidad
+     </a>
+     <a href='#logistics' className='navbar__link'>
+      Detalles
+     </a>
+     <a href='#faq' className='navbar__link'>
+      Preguntas frecuentes
+     </a>
     </nav>
 
     <div className='navbar__actions'>
@@ -59,12 +71,24 @@ const Navbar: React.FC = () => {
       transition={{ duration: 0.3 }}
      >
       <nav className='navbar__mobile-nav'>
-       <a href='#learn' className='navbar__mobile-link' onClick={closeMobileMenu}>Lo que aprenderás</a>
-       <a href='#audience' className='navbar__mobile-link' onClick={closeMobileMenu}>Para quién es</a>
-       <a href='#authority' className='navbar__mobile-link' onClick={closeMobileMenu}>Con quién aprenderás</a>
-       <a href='#social' className='navbar__mobile-link' onClick={closeMobileMenu}>Comunidad</a>
-       <a href='#logistics' className='navbar__mobile-link' onClick={closeMobileMenu}>Detalles</a>
-       <a href='#faq' className='navbar__mobile-link' onClick={closeMobileMenu}>Preguntas frecuentes</a>
+       <a href='#learn' className='navbar__mobile-link' onClick={closeMobileMenu}>
+        Programa
+       </a>
+       <a href='#audience' className='navbar__mobile-link' onClick={closeMobileMenu}>
+        Audiencia
+       </a>
+       <a href='#authority' className='navbar__mobile-link' onClick={closeMobileMenu}>
+        Instructora
+       </a>
+       <a href='#social' className='navbar__mobile-link' onClick={closeMobileMenu}>
+        Comunidad
+       </a>
+       <a href='#logistics' className='navbar__mobile-link' onClick={closeMobileMenu}>
+        Detalles
+       </a>
+       <a href='#faq' className='navbar__mobile-link' onClick={closeMobileMenu}>
+        Preguntas Frecuentes
+       </a>
       </nav>
      </motion.div>
     )}

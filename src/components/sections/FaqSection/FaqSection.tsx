@@ -56,7 +56,7 @@ const FaqSection: React.FC = () => {
               <motion.div
                 key={idx}
                 variants={staggerItem}
-                className="faq__item"
+                className={`faq__item ${isOpen ? 'faq__item--open' : ''}`}
               >
                 <button
                   className="faq__question"

@@ -43,6 +43,11 @@
     border-color: var(--color-primary);
     box-shadow: 0 12px 40px var(--glow-card-hover);
     transform: translateY(-4px);
+
+    .logistics__card-icon {
+      filter: drop-shadow(0 0 8px var(--glow-primary));
+      transform: scale(1.08);
+    }
   }
 }
 
@@ -55,6 +60,7 @@
   font-size: 4rem;
   height: 6rem;
   justify-content: center;
+  transition: filter 0.25s ease, transform 0.25s ease;
   width: 6rem;
 }
 

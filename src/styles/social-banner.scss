@@ -21,7 +21,11 @@
   padding: 4rem 2rem;
   position: relative;
   text-align: center;
-  width: 100%;
+  width: 90%;
+
+  @media (min-width: 768px) {
+    width: 80%;
+  }
 
   /* Elegant accent border on top */
   &::before {
@@ -42,6 +46,7 @@
   font-weight: 900;
   letter-spacing: -0.02em;
   margin: 0;
+  text-shadow: 0 0 15px var(--glow-primary);
 }
 
 .social-banner__subtitle {

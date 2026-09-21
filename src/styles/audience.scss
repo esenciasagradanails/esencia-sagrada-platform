@@ -59,6 +59,11 @@
     border-color: var(--color-primary);
     box-shadow: 0 12px 40px var(--glow-card-hover);
     transform: translateY(-4px);
+
+    .audience__card-icon {
+      filter: drop-shadow(0 0 8px var(--glow-primary));
+      transform: scale(1.08);
+    }
   }
 }
 
@@ -68,9 +73,11 @@
   border-radius: 50%;
   color: var(--color-primary);
   display: flex;
-  height: 5rem;
+  font-size: 2rem;
+  height: 4rem;
   justify-content: center;
-  width: 5rem;
+  transition: filter 0.25s ease, transform 0.25s ease;
+  width: 4rem;
 }
 
 .audience__card-title {
