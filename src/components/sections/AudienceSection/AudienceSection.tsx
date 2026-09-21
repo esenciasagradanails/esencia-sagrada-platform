@@ -12,7 +12,7 @@ const audiences = [
 
 const AudienceSection: React.FC = () => {
   return (
-    <section className="audience">
+    <section className="audience" id="audience">
       <div className="core-container">
         <motion.div
           className="audience__header"
@@ -21,7 +21,7 @@ const AudienceSection: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className="audience__title">¿Para Quién Es Esta Masterclass?</h2>
+          <h2 className="audience__title">¿Para quién es esta masterclass?</h2>
           <p className="audience__subtitle">
             Hemos diseñado esta experiencia sin importar en qué nivel te encuentres actualmente.
           </p>

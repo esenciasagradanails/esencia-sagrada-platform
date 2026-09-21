@@ -31,7 +31,7 @@ const FaqSection: React.FC = () => {
   };
 
   return (
-    <section className="faq">
+    <section className="faq" id="faq">
       <div className="core-container">
         <motion.h2
           className="faq__title"
@@ -40,7 +40,7 @@ const FaqSection: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Preguntas Frecuentes
+          Preguntas frecuentes
         </motion.h2>
 
         <motion.div
@@ -56,7 +56,7 @@ const FaqSection: React.FC = () => {
               <motion.div
                 key={idx}
                 variants={staggerItem}
-                className="faq__item"
+                className={`faq__item ${isOpen ? 'faq__item--open' : ''}`}
               >
                 <button
                   className="faq__question"

@@ -1,11 +1,15 @@
 /* Navbar styles — src/styles/navbar.scss */
 
 .navbar {
- background-color: var(--bg-base);
+ -webkit-backdrop-filter: blur(12px);
+ backdrop-filter: blur(12px);
+ background-color: rgba(var(--bg-base-rgb), 0.85);
  border-bottom: 1px solid var(--border-color);
- position: relative;
+ position: fixed;
+ top: 0;
  transition: background-color 0.3s ease;
  width: 100%;
+ z-index: 50;
 }
 
 .navbar__inner {
@@ -13,9 +17,9 @@
  display: flex;
  justify-content: space-between;
  margin: 0 auto;
- max-width: 1200px;
+ max-width: 1400px;
  /* generous vertical padding so the logo has room to breathe */
- padding: 1.5rem 2rem;
+ padding: 0.5rem 2rem;
  width: 100%;
 }
 
@@ -23,9 +27,15 @@
 .navbar__logo {
  display: block;
  flex-shrink: 0;
- height: auto;
- object-fit: contain;
- width: 200px;
+ height: 90px;
+ object-fit: cover;
+ width: 140px;
+}
+
+.navbar__actions {
+ align-items: center;
+ display: flex;
+ gap: 1rem;
 }
 
 .navbar__theme-btn {
@@ -37,10 +47,36 @@
  cursor: pointer;
  display: flex;
  justify-content: center;
- padding: 0.75rem;
+ padding: 0.6rem;
  transition: box-shadow 0.2s ease;
 
  &:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+ }
+}
+
+.navbar__nav {
+ align-items: center;
+ display: flex;
+ gap: 1.5rem;
+
+ @media (max-width: 1024px) {
+  display: none;
+ }
+}
+
+.navbar__link {
+ align-items: center;
+ color: var(--text-main);
+ display: flex;
+ font-size: 0.9rem;
+ font-weight: 600;
+ gap: 0.5rem;
+ text-decoration: none;
+ transition: color 0.2s ease, transform 0.2s ease;
+
+ &:hover {
+  color: var(--color-primary);
+  transform: translateY(-2px);
  }
 }

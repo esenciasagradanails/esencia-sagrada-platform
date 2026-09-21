@@ -13,6 +13,7 @@
   letter-spacing: -0.03em;
   margin-bottom: 3rem;
   text-align: center;
+  text-shadow: 0 0 15px var(--glow-primary);
   width: 100%;
 }
 
@@ -36,11 +37,17 @@
   min-width: 300px;
   padding: 4rem 3rem;
   text-align: center;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
 
   &:hover {
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    border-color: var(--color-primary);
+    box-shadow: 0 12px 40px var(--glow-card-hover);
     transform: translateY(-4px);
+
+    .logistics__card-icon {
+      filter: drop-shadow(0 0 8px var(--glow-primary));
+      transform: scale(1.08);
+    }
   }
 }
 
@@ -53,6 +60,7 @@
   font-size: 4rem;
   height: 6rem;
   justify-content: center;
+  transition: filter 0.25s ease, transform 0.25s ease;
   width: 6rem;
 }
 

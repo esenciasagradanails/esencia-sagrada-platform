@@ -12,7 +12,7 @@ const topics = [
 
 const LearnSection: React.FC = () => {
   return (
-    <section className="learn">
+    <section className="learn" id="learn">
       <div className="core-container">
         <motion.h2
           className="learn__title"
@@ -21,7 +21,7 @@ const LearnSection: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Lo Que Aprenderás
+          Lo que aprenderás
         </motion.h2>
 
         <motion.div

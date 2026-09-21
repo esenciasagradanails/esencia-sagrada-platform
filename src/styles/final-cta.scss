@@ -21,11 +21,11 @@
 
 .final-cta__title {
   color: var(--color-primary);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
-  margin: 0;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 15px var(--glow-primary);
 }
 
 .final-cta__subtitle {

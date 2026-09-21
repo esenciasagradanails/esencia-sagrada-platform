@@ -8,6 +8,8 @@
   --border-color: #e2d5c4;
   --color-primary: #c59b5f;
   --color-primary-hover: #a9824c;
+  --glow-card-hover: rgba(197, 155, 95, 0.15);
+  --glow-primary: rgba(197, 155, 95, 0.4);
   --text-main: #4a3320;
   --text-muted: #80634d;
 }
@@ -18,8 +20,10 @@
   --border-color: #3d352f;
   --color-primary: #c59b5f;
   --color-primary-hover: #d4aa70;
-  --text-main: #f3efea;
-  --text-muted: #afa499;
+  --glow-card-hover: rgba(197, 155, 95, 0.25);
+  --glow-primary: rgba(197, 155, 95, 0.6);
+  --text-main: #f4efe6;
+  --text-muted: #b8a89a;
 }
 
 /* ============================================================
@@ -55,7 +59,9 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
 }
-
+section {
+  scroll-margin-top: 6rem;
+}
 a {
   color: inherit;
   text-decoration: none;

@@ -13,6 +13,7 @@
   letter-spacing: -0.03em;
   margin-bottom: 3rem;
   text-align: center;
+  text-shadow: 0 0 15px var(--glow-primary);
   width: 100%;
 }
 
@@ -28,11 +29,13 @@
   border: 1px solid var(--border-color);
   border-radius: 1rem;
   overflow: hidden;
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
   width: 100%;
 
-  &:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  &:hover,
+  &--open {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 20px var(--glow-card-hover);
   }
 }
 

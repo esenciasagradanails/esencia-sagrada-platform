@@ -5,6 +5,7 @@ import HeroSection from '../../components/sections/HeroSection/HeroSection';
 import LearnSection from '../../components/sections/LearnSection/LearnSection';
 import AudienceSection from '../../components/sections/AudienceSection/AudienceSection';
 import AuthoritySection from '../../components/sections/AuthoritySection/AuthoritySection';
+import SocialBannerSection from '../../components/sections/SocialBannerSection/SocialBannerSection';
 import LogisticsSection from '../../components/sections/LogisticsSection/LogisticsSection';
 import FaqSection from '../../components/sections/FaqSection/FaqSection';
 import FinalCtaSection from '../../components/sections/FinalCtaSection/FinalCtaSection';
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
         <LearnSection />
         <AudienceSection />
         <AuthoritySection />
+        <SocialBannerSection />
         <LogisticsSection />
         <FaqSection />
         <FinalCtaSection />

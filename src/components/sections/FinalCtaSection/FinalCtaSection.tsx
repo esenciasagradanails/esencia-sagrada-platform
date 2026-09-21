@@ -17,7 +17,7 @@ const FinalCtaSection: React.FC = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h2 variants={fadeUp} className="final-cta__title">
-            El Momento Es Ahora
+            El momento es ahora
           </motion.h2>
 
           <motion.p variants={fadeUp} className="final-cta__subtitle">
