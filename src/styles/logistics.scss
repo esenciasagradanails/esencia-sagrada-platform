@@ -1,0 +1,70 @@
+/* Logistics section styles — src/styles/ */
+
+.logistics {
+  background-color: var(--bg-base);
+  padding: 6rem 0;
+  width: 100%;
+}
+
+.logistics__title {
+  color: var(--color-primary);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: 3rem;
+  text-align: center;
+  width: 100%;
+}
+
+.logistics__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.logistics__card {
+  align-items: center;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 300px;
+  padding: 4rem 3rem;
+  text-align: center;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+  }
+}
+
+.logistics__card-icon {
+  align-items: center;
+  background-color: rgba(197, 155, 95, 0.12);
+  border-radius: 50%;
+  color: var(--color-primary);
+  display: flex;
+  font-size: 4rem;
+  height: 6rem;
+  justify-content: center;
+  width: 6rem;
+}
+
+.logistics__card-label {
+  color: var(--text-main);
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.logistics__card-value {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  margin: 0;
+}
