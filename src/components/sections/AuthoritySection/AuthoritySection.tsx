@@ -7,7 +7,7 @@ import '../../../styles/authority.scss';
 
 const AuthoritySection: React.FC = () => {
  return (
-  <section className='authority'>
+  <section className='authority' id='authority'>
    <div className='authority__inner'>
     <motion.div
      className='authority__image-col'

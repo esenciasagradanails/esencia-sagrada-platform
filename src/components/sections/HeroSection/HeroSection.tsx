@@ -5,7 +5,7 @@ import '../../../styles/hero.scss';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="hero__blob-left" />
       <div className="hero__blob-right" />
 

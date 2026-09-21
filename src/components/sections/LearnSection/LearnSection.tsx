@@ -12,7 +12,7 @@ const topics = [
 
 const LearnSection: React.FC = () => {
   return (
-    <section className="learn">
+    <section className="learn" id="learn">
       <div className="core-container">
         <motion.h2
           className="learn__title"

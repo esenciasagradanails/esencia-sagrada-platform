@@ -1,11 +1,15 @@
 /* Navbar styles — src/styles/navbar.scss */
 
 .navbar {
- background-color: var(--bg-base);
+ -webkit-backdrop-filter: blur(12px);
+ backdrop-filter: blur(12px);
+ background-color: rgba(var(--bg-base-rgb), 0.85);
  border-bottom: 1px solid var(--border-color);
- position: relative;
+ position: fixed;
+ top: 0;
  transition: background-color 0.3s ease;
  width: 100%;
+ z-index: 50;
 }
 
 .navbar__inner {
@@ -13,9 +17,9 @@
  display: flex;
  justify-content: space-between;
  margin: 0 auto;
- max-width: 1200px;
+ max-width: 1400px;
  /* generous vertical padding so the logo has room to breathe */
- padding: 1.5rem 2rem;
+ padding: 1rem 2rem;
  width: 100%;
 }
 
@@ -28,7 +32,7 @@
  width: 220px;
 }
 
-.navbar__theme-btn {
+ .navbar__theme-btn {
  align-items: center;
  background-color: var(--bg-surface);
  border: 1px solid var(--border-color);
@@ -42,5 +46,27 @@
 
  &:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+ }
+}
+
+.navbar__nav {
+ align-items: center;
+ display: flex;
+ gap: 2rem;
+
+ @media (max-width: 1024px) {
+  display: none;
+ }
+}
+
+.navbar__link {
+ color: var(--text-main);
+ font-size: 1.05rem;
+ font-weight: 600;
+ text-decoration: none;
+ transition: color 0.2s ease;
+
+ &:hover {
+  color: var(--color-primary);
  }
 }

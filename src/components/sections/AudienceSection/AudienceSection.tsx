@@ -12,7 +12,7 @@ const audiences = [
 
 const AudienceSection: React.FC = () => {
   return (
-    <section className="audience">
+    <section className="audience" id="audience">
       <div className="core-container">
         <motion.div
           className="audience__header"

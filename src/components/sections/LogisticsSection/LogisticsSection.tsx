@@ -12,7 +12,7 @@ const details = [
 
 const LogisticsSection: React.FC = () => {
   return (
-    <section className="logistics">
+    <section className="logistics" id="logistics">
       <div className="core-container">
         <motion.h2
           className="logistics__title"

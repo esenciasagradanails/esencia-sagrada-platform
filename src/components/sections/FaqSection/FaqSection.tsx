@@ -31,7 +31,7 @@ const FaqSection: React.FC = () => {
   };
 
   return (
-    <section className="faq">
+    <section className="faq" id="faq">
       <div className="core-container">
         <motion.h2
           className="faq__title"
