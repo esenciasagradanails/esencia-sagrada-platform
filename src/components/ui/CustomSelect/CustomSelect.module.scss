@@ -1,0 +1,74 @@
+// Properties sorted A-Z within each block
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  width: 100%;
+}
+
+.label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select {
+  appearance: none;
+  background-color: var(--bg-surface);
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-main);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  padding: 0.65rem 2.5rem 0.65rem 0.875rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+
+  &:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--glow-primary);
+  }
+
+  &:hover:not(:focus) {
+    border-color: var(--color-primary-hover);
+  }
+
+  option {
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+  }
+}
+
+.selectError {
+  border-color: #e05c5c;
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(224, 92, 92, 0.25);
+  }
+}
+
+.arrow {
+  color: var(--color-primary);
+  font-size: 1rem;
+  pointer-events: none;
+  position: absolute;
+  right: 0.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.errorMessage {
+  color: #e05c5c;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
