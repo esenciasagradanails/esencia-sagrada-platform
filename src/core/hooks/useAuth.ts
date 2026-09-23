@@ -1,6 +1,7 @@
-import { Session, User } from '@supabase/supabase-js';
+import type { Session, User } from '@supabase/supabase-js';
 import { useEffect, useReducer } from 'react';
-import { supabase } from '../lib/supabaseClient';
+import { supabase } from '../services/supabaseClient';
+
 
 // ─── State ────────────────────────────────────────────────────────────────────
 
