@@ -1,0 +1,114 @@
+// Properties sorted A-Z within each block
+
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(20px, -30px) scale(1.08); }
+}
+
+.page {
+  align-items: center;
+  background-color: var(--bg-base);
+  display: flex;
+  justify-content: center;
+  min-height: 100dvh;
+  overflow: hidden;
+  padding: 1.5rem;
+  position: relative;
+}
+
+// ─── Decorative orbs ─────────────────────────────────────
+.orb1,
+.orb2 {
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.orb1 {
+  animation: floatOrb 10s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(197, 155, 95, 0.3) 0%, transparent 70%);
+  height: 500px;
+  left: -100px;
+  top: -150px;
+  width: 500px;
+}
+
+.orb2 {
+  animation: floatOrb 14s ease-in-out infinite reverse;
+  background: radial-gradient(circle, rgba(197, 155, 95, 0.15) 0%, transparent 70%);
+  bottom: -150px;
+  height: 400px;
+  right: -80px;
+  width: 400px;
+}
+
+// ─── Card ─────────────────────────────────────────────────
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(197, 155, 95, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 440px;
+  padding: 2.5rem;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+// ─── Logo area ────────────────────────────────────────────
+.logoArea {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.logoMark {
+  color: var(--color-primary);
+  display: block;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.brandName {
+  color: var(--text-main);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.brandTagline {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+// ─── Form ─────────────────────────────────────────────────
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.errorBanner {
+  background-color: rgba(224, 92, 92, 0.1);
+  border: 1px solid rgba(224, 92, 92, 0.3);
+  border-radius: 8px;
+  color: #e05c5c;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
