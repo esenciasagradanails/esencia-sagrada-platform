@@ -1,0 +1,29 @@
+@import './globals/tailwind.css';
+@import './globals/variables.scss';
+@import './views/Home/global.scss';
+
+// UI Kit
+@import './views/components/ui/CustomButton.scss';
+@import './views/components/ui/CustomCheckbox.scss';
+@import './views/components/ui/CustomInput.scss';
+@import './views/components/ui/CustomSelect.scss';
+
+// Shared Components
+@import './views/components/Navbar/navbar.scss';
+@import './views/components/Footer/footer.scss';
+@import './views/components/RegistrationModal/RegistrationModal.scss';
+
+// Home Sections
+@import './views/Home/hero.scss';
+@import './views/Home/learn.scss';
+@import './views/Home/audience.scss';
+@import './views/Home/authority.scss';
+@import './views/Home/social-banner.scss';
+@import './views/Home/logistics.scss';
+@import './views/Home/faq.scss';
+@import './views/Home/final-cta.scss';
+
+// Views
+@import './views/Home/home.scss';
+@import './views/Login/LoginView.scss';
+@import './views/Dashboard/DashboardView.scss';
