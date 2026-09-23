@@ -1,6 +1,7 @@
-import { ChangeEvent, FormEvent, useReducer } from 'react';
-import { supabase } from '../lib/supabaseClient';
-import type { LeadFormErrors, LeadFormValues } from '../types/lead.types';
+import type { ChangeEvent } from 'react';
+import { useReducer } from 'react';
+import { supabase } from '../services/supabaseClient';
+import type { LeadFormErrors, LeadFormValues } from '../models/lead.types';
 
 // ─── State shape ─────────────────────────────────────────────────────────────
 
@@ -23,6 +24,7 @@ type LeadCaptureAction =
 // ─── Initial state ────────────────────────────────────────────────────────────
 
 const INITIAL_FORM_VALUES: LeadFormValues = {
+  email: '',
   current_experience: '',
   experience_time: '',
   full_name: '',
@@ -70,6 +72,7 @@ function leadCaptureReducer(
 // ─── Validation ───────────────────────────────────────────────────────────────
 
 const STRING_REQUIRED_FIELDS: ReadonlyArray<keyof LeadFormValues> = [
+  'email',
   'current_experience',
   'experience_time',
   'full_name',
@@ -81,6 +84,7 @@ const STRING_REQUIRED_FIELDS: ReadonlyArray<keyof LeadFormValues> = [
 ];
 
 const PHONE_REGEX = /^[+\d][\d\s\-().]{6,20}$/;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function validate(values: LeadFormValues): LeadFormErrors {
   const errors: LeadFormErrors = {};
@@ -96,6 +100,10 @@ function validate(values: LeadFormValues): LeadFormErrors {
     errors.whatsapp_number = 'Ingresa un número de WhatsApp válido.';
   }
 
+  if (values.email && !EMAIL_REGEX.test(values.email.trim())) {
+    errors.email = 'Ingresa un correo electrónico válido.';
+  }
+
   return errors;
 }
 
@@ -107,7 +115,7 @@ interface UseLeadCaptureReturn {
   handleChange: (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => void;
-  handleSubmit: (e: FormEvent<HTMLFormElement>) => Promise<void>;
+  handleSubmit: (e: SubmitEvent) => Promise<void>;
   isLoading: boolean;
   isSuccess: boolean;
 }
@@ -127,7 +135,7 @@ export function useLeadCapture(onSuccess?: () => void): UseLeadCaptureReturn {
     dispatch({ field: target.name as keyof LeadFormValues, type: 'SET_FIELD', value });
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: SubmitEvent) => {
     e.preventDefault();
 
     const errors = validate(state.formValues);
@@ -143,10 +151,17 @@ export function useLeadCapture(onSuccess?: () => void): UseLeadCaptureReturn {
       .insert([state.formValues]);
 
     if (error) {
-      dispatch({
-        errors: { full_name: `Error al enviar: ${error.message}` },
-        type: 'SUBMIT_FAILURE',
-      });
+      if (error.code === '23505') {
+        dispatch({
+          errors: { full_name: 'El correo electrónico o el número de WhatsApp ya se encuentra registrado.' },
+          type: 'SUBMIT_FAILURE',
+        });
+      } else {
+        dispatch({
+          errors: { full_name: `Error al enviar: ${error.message}` },
+          type: 'SUBMIT_FAILURE',
+        });
+      }
       return;
     }
 
