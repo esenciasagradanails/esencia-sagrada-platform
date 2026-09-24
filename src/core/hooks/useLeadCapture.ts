@@ -153,7 +153,10 @@ export function useLeadCapture(onSuccess?: () => void): UseLeadCaptureReturn {
     if (error) {
       if (error.code === '23505') {
         dispatch({
-          errors: { full_name: 'El correo electrónico o el número de WhatsApp ya se encuentra registrado.' },
+          errors: { 
+            email: 'El correo electrónico o el número de WhatsApp ya se encuentra registrado.',
+            whatsapp_number: 'El correo electrónico o el número de WhatsApp ya se encuentra registrado.'
+          },
           type: 'SUBMIT_FAILURE',
         });
       } else {
