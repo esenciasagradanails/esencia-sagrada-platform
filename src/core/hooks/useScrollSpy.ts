@@ -12,7 +12,7 @@ export function useScrollSpy(sectionIds: string[], offset: number = 100) {
       for (const id of sectionIds) {
         const element = document.getElementById(id);
         if (element) {
-          const { top, bottom } = element.getBoundingClientRect();
+          const { top } = element.getBoundingClientRect();
           // We check the element's position relative to the viewport
           // plus the document scroll to get absolute position.
           const elementTop = top + window.scrollY;
