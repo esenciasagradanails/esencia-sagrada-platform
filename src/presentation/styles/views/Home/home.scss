@@ -1,0 +1,16 @@
+/* Home / page shell styles — located in src/presentation/styles/ */
+
+.page-wrapper {
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

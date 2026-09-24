@@ -1,0 +1,101 @@
+// Properties sorted A-Z within each block
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cb-button {
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  min-height: 48px;
+  outline: none;
+  padding: 0.75rem 1.75rem;
+  position: relative;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, transform 0.15s ease;
+  user-select: none;
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px var(--glow-primary);
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+    transform: none !important;
+  }
+}
+
+// --- Variant: primary ---
+.cb-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  box-shadow: 0 4px 15px var(--glow-primary);
+  color: #fff;
+
+  &:hover:not(:disabled) {
+    box-shadow: 0 6px 22px var(--glow-primary);
+    transform: translateY(-2px);
+  }
+
+  &:active:not(:disabled) {
+    box-shadow: 0 2px 8px var(--glow-primary);
+    transform: translateY(0);
+  }
+}
+
+// --- Variant: secondary ---
+.cb-secondary {
+  background-color: var(--bg-surface);
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+
+  &:hover:not(:disabled) {
+    background-color: var(--color-primary);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+// --- Variant: ghost ---
+.cb-ghost {
+  background-color: transparent;
+  border: 1.5px solid var(--border-color);
+  color: var(--text-muted);
+
+  &:hover:not(:disabled) {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+}
+
+// --- Loading spinner ---
+.cb-spinner {
+  animation: spin 0.75s linear infinite;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  display: block;
+  height: 22px;
+  width: 22px;
+}
+
+.cb-secondary .cb-spinner,
+.cb-ghost .cb-spinner {
+  border-color: rgba(197, 155, 95, 0.3);
+  border-top-color: var(--color-primary);
+}

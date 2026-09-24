@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { useAppSelector } from './hooks/storeHooks';
-import Home from './views/Home/Home';
+import { useAppSelector } from './core/hooks/storeHooks';
+import AppRouter from './presentation/routes/AppRouter';
 
 function App() {
   const theme = useAppSelector((state) => state.theme.theme);
@@ -10,7 +10,7 @@ function App() {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
-  return <Home />;
+  return <AppRouter />;
 }
 
 export default App;
